@@ -1,10 +1,12 @@
+﻿import { img } from '../utils/imageUrl';
+
 const reasons = [
-    { num: '01', title: 'Integrated Governance', desc: 'One contract. One SLA. One point of contact who owns every outcome — no vendor matrix to manage.', icon: '🏛️' },
-    { num: '02', title: 'Compliance-First Culture', desc: 'Statutory, regulatory, and ISO-aligned compliance built into every process — not bolted on as an afterthought.', icon: '✅' },
-    { num: '03', title: 'Seamless Scalability', desc: 'Expand from one function to seven without operational disruption. Our structure scales with you, not against you.', icon: '📈' },
-    { num: '04', title: 'Data Confidentiality', desc: 'Company-owned teams eliminate third-party data exposure. Your sensitive data stays within our secure, proprietary environment.', icon: '🔐' },
-    { num: '05', title: 'Cross-functional Coverage', desc: 'HR, Payroll, Finance, IT — all interconnected. We eliminate the operational silos that slow businesses down.', icon: '🔄' },
-    { num: '06', title: 'Continuity Assurance', desc: 'Documented processes and structured redundancy mean uninterrupted delivery — even when the unexpected happens.', icon: '♾️' },
+    { num: '01', title: 'Integrated Governance', desc: 'One contract. One SLA. One point of contact who owns every outcome â€” no vendor matrix to manage.', icon: 'ðŸ›ï¸' },
+    { num: '02', title: 'Compliance-First Culture', desc: 'Statutory, regulatory, and ISO-aligned compliance built into every process â€” not bolted on as an afterthought.', icon: 'âœ…' },
+    { num: '03', title: 'Seamless Scalability', desc: 'Expand from one function to seven without operational disruption. Our structure scales with you, not against you.', icon: 'ðŸ“ˆ' },
+    { num: '04', title: 'Data Confidentiality', desc: 'Company-owned teams eliminate third-party data exposure. Your sensitive data stays within our secure, proprietary environment.', icon: 'ðŸ”' },
+    { num: '05', title: 'Cross-functional Coverage', desc: 'HR, Payroll, Finance, IT â€” all interconnected. We eliminate the operational silos that slow businesses down.', icon: 'ðŸ”„' },
+    { num: '06', title: 'Continuity Assurance', desc: 'Documented processes and structured redundancy mean uninterrupted delivery â€” even when the unexpected happens.', icon: 'â™¾ï¸' },
 ];
 
 export default function WhyUs() {
@@ -22,10 +24,10 @@ export default function WhyUs() {
 
             {/* Decorative shapes from template */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
-                <img src="/images/shape/choose-shape-left.png" alt="" className="h-64" />
+                <img src={img("shape/choose-shape-left.png")} alt="" className="h-64" />
             </div>
             <div className="absolute right-0 top-0 opacity-15 pointer-events-none">
-                <img src="/images/shape/choose-shape-right.png" alt="" className="h-52" />
+                <img src={img("shape/choose-shape-right.png")} alt="" className="h-52" />
             </div>
 
             {/* Grid pattern */}
@@ -36,7 +38,7 @@ export default function WhyUs() {
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <div className="flex items-center justify-center gap-2 mb-4">
-                        <img src="/images/icon/section-title.png" alt="" className="h-4 brightness-0 invert" />
+                        <img src={img("icon/section-title.png")} alt="" className="h-4 brightness-0 invert" />
                         <span className="text-white/60 font-semibold text-sm uppercase tracking-widest">Why Tryfecta</span>
                     </div>
                     <h2 className="text-4xl lg:text-5xl font-black text-white mb-5">The Integrated Advantage</h2>

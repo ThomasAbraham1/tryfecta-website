@@ -1,24 +1,25 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
+import { img } from '../utils/imageUrl';
 
-// Slides sourced from official Gratech demo — same CDN images
+// Slides sourced from official Gratech demo â€” same CDN images
 const slides = [
     {
         bg: 'https://gramentheme.com/html/gratech/assets/images/banner/banner-image.jpg',
-        subtitle: 'Premium BPO — Fully Accountable',
+        subtitle: 'Premium BPO â€” Fully Accountable',
         title: <>Company-Owned.<br />Company-Managed.<br /><span className="text-accent">Fully Accountable.</span></>,
-        desc: 'We Don\'t Just Outsource. We Own It. One partner, one governance structure, zero subcontracting — for every back-office function your business needs.',
+        desc: 'We Don\'t Just Outsource. We Own It. One partner, one governance structure, zero subcontracting â€” for every back-office function your business needs.',
     },
     {
         bg: 'https://gramentheme.com/html/gratech/assets/images/banner/banner-image2.jpg',
         subtitle: 'Single Point of Accountability',
         title: <>Your Business,<br />Our Accountability.<br /><span className="text-accent">No Exceptions.</span></>,
-        desc: 'From HR and Payroll to IT and ISO Certification — one integrated management structure owns every outcome, every compliance requirement, every day.',
+        desc: 'From HR and Payroll to IT and ISO Certification â€” one integrated management structure owns every outcome, every compliance requirement, every day.',
     },
     {
         bg: 'https://gramentheme.com/html/gratech/assets/images/banner/banner-image3.jpg',
         subtitle: 'Built to Scale With You',
         title: <>Integrated Services.<br />Seamless Growth.<br /><span className="text-accent">Zero Compromise.</span></>,
-        desc: 'Our company-owned model scales dynamically from startup to multinational — maintaining the same standards of compliance, confidentiality, and continuity.',
+        desc: 'Our company-owned model scales dynamically from startup to multinational â€” maintaining the same standards of compliance, confidentiality, and continuity.',
     },
 ];
 
@@ -47,11 +48,11 @@ export default function Hero() {
 
             {/* Decorative left shape from template */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 opacity-30 pointer-events-none hidden xl:block">
-                <img src="/images/banner/banner-solid-left-shape.png" alt="" className="h-[70vh] object-contain" />
+                <img src={img("banner/banner-solid-left-shape.png")} alt="" className="h-[70vh] object-contain" />
             </div>
             {/* Decorative right shape */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none hidden xl:block">
-                <img src="/images/banner/banner-shape-right.png" alt="" className="h-[60vh] object-contain" />
+                <img src={img("banner/banner-shape-right.png")} alt="" className="h-[60vh] object-contain" />
             </div>
 
             {/* Main Content */}
@@ -79,7 +80,7 @@ export default function Hero() {
 
                         {/* Anti-outsourcing strip */}
                         <div className={`flex flex-wrap gap-3 mb-10 transition-all duration-700 delay-300 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                            {['🚫 No Fragmented Vendors', '🚫 No Subcontracting', '🚫 No Compromise'].map(item => (
+                            {['ðŸš« No Fragmented Vendors', 'ðŸš« No Subcontracting', 'ðŸš« No Compromise'].map(item => (
                                 <span key={item} className="bg-white/10 border border-white/20 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full font-medium">
                                     {item}
                                 </span>

@@ -1,21 +1,23 @@
+﻿import { img } from '../utils/imageUrl';
+
 const valueProps = [
     {
-        icon: '/images/icon/about-icon1.png',
+        icon: '',
         title: 'Single Point of Accountability',
-        desc: 'One contract. One governance structure. One partner who owns every outcome — eliminating confusion and vendor management overhead.',
+        desc: 'One contract. One governance structure. One partner who owns every outcome â€” eliminating confusion and vendor management overhead.',
     },
     {
-        icon: '/images/icon/about-icon2.png',
+        icon: '',
         title: '24/7 Operational Continuity',
         desc: 'Structured redundancy and documented processes ensure uninterrupted service delivery, even when the unexpected happens.',
     },
 ];
 
 const stats = [
-    { value: '100%', label: 'Company-Owned', icon: '/images/icon/counter-icon1.png' },
-    { value: 'ISO', label: 'Certified Processes', icon: '/images/icon/counter-icon2.png' },
-    { value: '7+', label: 'Service Pillars', icon: '/images/icon/counter-icon3.png' },
-    { value: '24/7', label: 'Support Coverage', icon: '/images/icon/counter-icon4.png' },
+    { value: '100%', label: 'Company-Owned', icon: '' },
+    { value: 'ISO', label: 'Certified Processes', icon: '' },
+    { value: '7+', label: 'Service Pillars', icon: '' },
+    { value: '24/7', label: 'Support Coverage', icon: '' },
 ];
 
 export default function About() {
@@ -23,7 +25,7 @@ export default function About() {
         <section id="about" className="bg-slate-50 pt-24 pb-0 relative overflow-hidden">
             {/* Decorative line shape */}
             <div className="absolute left-0 top-0 opacity-20 pointer-events-none">
-                <img src="/images/shape/about-line.png" alt="" className="max-w-xs" />
+                <img src={img("shape/about-line.png")} alt="" className="max-w-xs" />
             </div>
 
             <div className="max-w-7xl mx-auto px-6 pb-24">
@@ -56,14 +58,14 @@ export default function About() {
 
                         {/* Decorative circle */}
                         <div className="absolute bottom-4 left-0 opacity-10 pointer-events-none">
-                            <img src="/images/shape/about-circle.png" alt="" className="w-40" />
+                            <img src={img("shape/about-circle.png")} alt="" className="w-40" />
                         </div>
                     </div>
 
                     {/* Right: content */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <img src="/images/icon/section-title.png" alt="" className="h-4" />
+                            <img src={img("icon/section-title.png")} alt="" className="h-4" />
                             <span className="text-primary font-semibold text-sm uppercase tracking-widest">About Tryfecta</span>
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-black text-secondary mb-5 leading-tight">
@@ -72,7 +74,7 @@ export default function About() {
                             <span className="text-primary">We Own It.</span>
                         </h2>
                         <p className="text-gray-500 text-lg leading-relaxed mb-8">
-                            Tryfecta Management takes <strong className="text-secondary">absolute ownership</strong> of your back-office and support functions —
+                            Tryfecta Management takes <strong className="text-secondary">absolute ownership</strong> of your back-office and support functions â€”
                             acting as a true, seamless extension of your business. While you focus on your core activities,
                             we ensure operational excellence, compliance, and continuity through a single, integrated governance model.
                         </p>
