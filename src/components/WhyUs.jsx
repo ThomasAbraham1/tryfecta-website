@@ -14,8 +14,9 @@ export default function WhyUs() {
         <section id="whyus" className="relative py-24 overflow-hidden">
             {/* Full background image with overlay */}
             <div className="absolute inset-0">
+                {/* Faceless: glass corporate skyscraper shot from below — no people */}
                 <img
-                    src="https://gramentheme.com/html/gratech/assets/images/choose/choose-image1.png"
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
                     alt=""
                     className="w-full h-full object-cover"
                 />
