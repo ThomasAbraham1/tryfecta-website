@@ -16,7 +16,7 @@ export default function WhyUs() {
             <div className="absolute inset-0">
                 {/* Faceless: night commercial city skyline, alive and dark */}
                 <img
-                    src="/images/bg/why-section.jpeg"
+                    src={img('bg/why-section.jpeg')}
                     alt="Corporate background"
                     className="w-full h-full object-cover"
                 />

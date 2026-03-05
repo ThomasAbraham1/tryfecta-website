@@ -1,3 +1,5 @@
+import { img } from '../utils/imageUrl';
+
 const services = [
     'Human Resources', 'Payroll Services', 'Accounting & Finance',
     'IT & Digital Support', 'Commercial Services', 'ISO Certification', 'Corporate Secretarial',
@@ -52,7 +54,7 @@ export default function Footer() {
                     <div className="lg:col-span-1">
                         <a href="#home" className="flex-shrink-0 overflow-hidden mb-5 block" style={{ height: '48px' }}>
                             <img
-                                src="/images/logo/tryfecta.png"
+                                src={img('logo/tryfecta.png')}
                                 alt="Tryfecta Management"
                                 style={{ height: '140px', width: 'auto', marginTop: '-46px' }}
                             />

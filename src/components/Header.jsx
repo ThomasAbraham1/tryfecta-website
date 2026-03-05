@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { img } from '../utils/imageUrl';
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -52,7 +53,7 @@ export default function Header() {
                     {/* Logo — overflow-hidden crops the transparent padding in the 2000×2000 PNG */}
                     <a href="#home" className="flex-shrink-0 overflow-hidden" style={{ height: '48px' }}>
                         <img
-                            src="/images/logo/tryfecta.png"
+                            src={img('logo/tryfecta.png')}
                             alt="Tryfecta Management"
                             style={{ height: '140px', width: 'auto', marginTop: '-46px' }}
                         />
