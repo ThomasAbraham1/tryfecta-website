@@ -20,7 +20,7 @@ export default function WhyUs() {
                     alt=""
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-secondary/92" />
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/98 via-secondary/95 to-primary/80" />
             </div>
 
             {/* Decorative shapes from template */}
@@ -51,9 +51,9 @@ export default function WhyUs() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {reasons.map((r) => (
                         <div key={r.num}
-                            className="group p-7 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/40 transition-all hover:-translate-y-1 relative overflow-hidden">
-                            <div className="absolute right-3 bottom-3 opacity-5 text-8xl font-black pointer-events-none">{r.num}</div>
-                            <div className="flex items-start gap-4 mb-4">
+                            className="group p-7 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/40 transition-all hover:-translate-y-1 relative overflow-hidden backdrop-blur-md">
+                            <div className="absolute -right-2 -bottom-6 text-white/15 text-9xl font-black pointer-events-none transition-all duration-500 group-hover:text-white/25 group-hover:-translate-y-2">{r.num}</div>
+                            <div className="flex items-start gap-4 mb-4 relative z-10">
                                 <span className="text-2xl">{r.icon}</span>
                             </div>
                             <h4 className="font-bold text-white text-lg mb-3 group-hover:text-accent transition-colors">{r.title}</h4>
