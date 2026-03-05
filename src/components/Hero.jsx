@@ -36,7 +36,7 @@ export default function Hero() {
     const slide = slides[current];
 
     return (
-        <section id="home" className="relative min-h-screen overflow-hidden">
+        <section id="home" className="relative min-h-[85vh] lg:min-h-screen overflow-hidden">
             {/* Background image with overlay */}
             {slides.map((s, i) => (
                 <div key={i}
@@ -56,8 +56,8 @@ export default function Hero() {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-10 flex items-center min-h-screen">
-                <div className="max-w-7xl mx-auto px-6 py-32 w-full">
+            <div className="relative z-10 flex items-center min-h-[85vh] lg:min-h-screen">
+                <div className="max-w-7xl mx-auto px-6 pt-32 pb-20 lg:py-32 w-full">
                     <div className="max-w-3xl">
                         {/* Subtitle badge */}
                         <div className={`flex items-center gap-3 mb-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
@@ -69,7 +69,7 @@ export default function Hero() {
                         </div>
 
                         {/* Main heading */}
-                        <h1 className={`text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight mb-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+                        <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight mb-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
                             {slide.title}
                         </h1>
 

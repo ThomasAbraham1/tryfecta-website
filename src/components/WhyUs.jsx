@@ -14,9 +14,9 @@ export default function WhyUs() {
         <section id="whyus" className="relative py-24 overflow-hidden">
             {/* Full background image with overlay */}
             <div className="absolute inset-0">
-                {/* Faceless: glass corporate skyscraper shot from below — no people */}
+                {/* Faceless: night commercial city skyline, alive and dark */}
                 <img
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+                    src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
                     alt=""
                     className="w-full h-full object-cover"
                 />
@@ -52,7 +52,7 @@ export default function WhyUs() {
                     {reasons.map((r) => (
                         <div key={r.num}
                             className="group p-7 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/40 transition-all hover:-translate-y-1 relative overflow-hidden backdrop-blur-md">
-                            <div className="absolute -right-2 -bottom-6 text-white/15 text-9xl font-black pointer-events-none transition-all duration-500 group-hover:text-white/25 group-hover:-translate-y-2">{r.num}</div>
+                            <div className="absolute right-0 bottom-0 text-white/15 text-9xl font-black pointer-events-none transition-all duration-500 group-hover:text-white/30 group-hover:-translate-y-2 leading-none p-2">{r.num}</div>
                             <div className="flex items-start gap-4 mb-4 relative z-10">
                                 <span className="text-2xl">{r.icon}</span>
                             </div>
