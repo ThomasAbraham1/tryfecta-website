@@ -121,7 +121,7 @@ export default function About() {
                         </div>
 
                         <div className="flex items-center gap-6">
-                            <a href="#contact"
+                            <a href="#services"
                                 className="px-7 py-3.5 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/25 flex items-center gap-2">
                                 Explore More
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

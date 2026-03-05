@@ -57,7 +57,7 @@ export default function Hero() {
 
             {/* Main Content */}
             <div className="relative z-10 flex items-center min-h-[85vh] lg:min-h-screen">
-                <div className="max-w-7xl mx-auto px-6 pt-32 pb-20 lg:py-32 w-full">
+                <div className="max-w-7xl mx-auto px-6 pt-24 pb-24 lg:py-32 w-full">
                     <div className="max-w-3xl">
                         {/* Subtitle badge */}
                         <div className={`flex items-center gap-3 mb-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>

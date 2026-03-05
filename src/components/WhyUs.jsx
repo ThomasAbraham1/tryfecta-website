@@ -66,7 +66,7 @@ export default function WhyUs() {
                 <div className="mt-14 text-center">
                     <a href="#contact"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/40">
-                        Partner With Tryfecta
+                        Request Consultation
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
