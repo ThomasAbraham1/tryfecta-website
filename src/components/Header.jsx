@@ -15,7 +15,6 @@ export default function Header() {
         { label: 'About', href: '#about' },
         { label: 'Services', href: '#services' },
         { label: 'Why Us', href: '#whyus' },
-        { label: 'Contact', href: '#contact' },
     ];
 
     return (
@@ -75,7 +74,7 @@ export default function Header() {
                     <div className="hidden lg:flex items-center gap-4">
                         <a href="#contact"
                             className="px-5 py-2.5 bg-primary text-white rounded-lg font-semibold text-sm hover:bg-primary-dark transition-colors flex items-center gap-2">
-                            Get Started
+                            Get In Touch
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
