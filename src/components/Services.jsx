@@ -2,46 +2,40 @@
 
 const pillars = [
     {
-        // Faceless: organized HR files/folders on a clean desk
         image: 'https://images.unsplash.com/photo-1507209696998-3c532be9b2b5?auto=format&fit=crop&w=800&q=80',
-        title: 'Human Resources',
-        desc: 'Full-cycle HR management — recruitment, onboarding, compliance, performance frameworks, and policy governance.',
-        tags: ['Recruitment', 'Compliance', 'Performance'],
+        title: 'Human Resources Management',
+        desc: 'Strategic and operational HR services that support workforce growth and regulatory compliance.',
+        tags: ['Talent Acquisition', 'HR Policy Development', 'Employee Lifecycle', 'Performance Management', 'Workforce Engagement'],
     },
     {
-        // Faceless: financial documents, calculator and coins on desk
         image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80',
-        title: 'Payroll Services',
-        desc: 'Mission-critical payroll accuracy — end-to-end processing, statutory deductions (PF, ESI, TDS), and HQ reporting.',
-        tags: ['PF/ESI/TDS', 'Processing', 'Reporting'],
+        title: 'Payroll & Statutory Compliance',
+        desc: 'Accurate, timely, and compliant payroll operations supported by regulatory expertise.',
+        tags: ['End-to-End Payroll', 'PF / ESI / TDS', 'Reporting Dashboards', 'Compliance Monitoring'],
     },
     {
-        // Faceless: accounting books, graphs and financial charts on screen
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-        title: 'Accounting & Finance',
-        desc: 'Financial foundations built right — bookkeeping, ledgers, management reporting, budgeting, audit support, and tax accounting.',
-        tags: ['Bookkeeping', 'Audit', 'Budgeting'],
+        title: 'Accounting & Financial Management',
+        desc: 'Financial clarity that supports decision-making and sustainable growth.',
+        tags: ['Bookkeeping / General Ledger', 'AP / AR Administration', 'Financial Reporting', 'Audit Preparation'],
     },
     {
-        // Faceless: server rack / data centre corridor
         image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
-        title: 'IT & Digital Support',
-        desc: 'Secure, stable tech environments — IT infrastructure, cloud solutions, cybersecurity management, and helpdesk support.',
-        tags: ['Cloud', 'Cybersecurity', 'Helpdesk'],
+        title: 'IT & Digital Infrastructure Support',
+        desc: 'Ensuring a secure, stable, and scalable technology environment aligned with operational requirements.',
+        tags: ['Infrastructure & Cloud', 'Cybersecurity Protocols', 'End-User Helpdesk', 'Data Protection'],
     },
     {
-        // Faceless: contracts and pen on a wooden desk — commercial/procurement
         image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80',
-        title: 'Commercial Services',
-        desc: 'Daily operational support through vendor management, contract administration, and strategic procurement.',
-        tags: ['Vendors', 'Contracts', 'Procurement'],
+        title: 'Commercial & Business Operations Support',
+        desc: 'Supporting day-to-day operational activities through structured commercial processes and vendor governance.',
+        tags: ['Vendor Management', 'Procurement Coordination', 'Commercial Documentation', 'Workflow Support'],
     },
     {
-        // Faceless: quality control checklist / compliance document with checkmarks
         image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80',
-        title: 'ISO Certification',
-        desc: 'International standards alignment — ISO 9001, 14001, 27001 implementation, gap analysis, and audit coordination.',
-        tags: ['ISO 9001', 'ISO 27001', 'Gap Analysis'],
+        title: 'ISO Certification & Management Systems Support',
+        desc: 'Enabling organizations to establish and maintain internationally recognized management system standards.',
+        tags: ['ISO 9001 / 14001 / 27001', 'Internal Audit Prep', 'Documentation Framework', 'Certification Coordination'],
     },
 ];
 
@@ -107,7 +101,7 @@ export default function Services() {
                         </div>
                     ))}
 
-                    {/* 7th service card — Corporate Secretarial */}
+                    {/* 7th service card — Corporate Secretarial & Governance */}
                     <div className="group bg-hero-gradient rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                         <div className="relative h-48 overflow-hidden">
                             {/* Faceless: legal library — gavel, law books, scales */}
@@ -126,10 +120,17 @@ export default function Services() {
                         </div>
                         <div className="p-6">
                             <div className="w-8 h-1 bg-accent rounded-full mb-4" />
-                            <h3 className="font-bold text-xl text-white mb-3">Corporate Secretarial</h3>
-                            <p className="text-white/65 text-sm leading-relaxed mb-6">
-                                Governance and legal compliance — statutory registers, annual returns, board coordination, regulatory liaison.
+                            <h3 className="font-bold text-xl text-white mb-3">Corporate Secretarial & Governance</h3>
+                            <p className="text-white/65 text-sm leading-relaxed mb-4">
+                                Supporting corporate governance structures and statutory compliance requirements to ensure regulatory alignment.
                             </p>
+                            <div className="flex flex-wrap gap-2 mb-5">
+                                {['Statutory Registers & Filings', 'Annual Returns', 'Board Meeting Coordination', 'Regulatory Liaison'].map(t => (
+                                    <span key={t} className="text-xs bg-white/10 text-white/80 px-3 py-1 rounded-full font-medium border border-white/15">
+                                        {t}
+                                    </span>
+                                ))}
+                            </div>
                             <a href="#contact"
                                 className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-secondary font-bold px-5 py-2.5 rounded-xl transition-all text-sm">
                                 Let's Build Together

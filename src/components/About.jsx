@@ -97,14 +97,12 @@ export default function About() {
                             <span className="text-primary font-semibold text-sm uppercase tracking-widest">About Tryfecta</span>
                         </div>
                         <h2 className="text-4xl lg:text-5xl font-black text-secondary mb-5 leading-tight">
-                            We Don't Just Outsource.
+                            We Don't Just Support.
                             <br />
-                            <span className="text-primary">We Own It.</span>
+                            <span className="text-primary">We Take Full Ownership.</span>
                         </h2>
                         <p className="text-gray-500 text-lg leading-relaxed mb-8">
-                            Tryfecta Management takes <strong className="text-secondary">absolute ownership</strong> of your back-office and support functions —
-                            acting as a true, seamless extension of your business. While you focus on your core activities,
-                            we ensure operational excellence, compliance, and continuity through a single, integrated governance model.
+                            Tryfecta Management provides end-to-end oversight of your back-office and support functions, functioning as a trusted extension of your organization. While you concentrate on strategic priorities, we ensure operational efficiency, compliance, and continuity through an integrated governance model.
                         </p>
 
                         {/* Feature rows */}

@@ -11,11 +11,11 @@ export default function Header() {
     }, []);
 
     const navLinks = [
-        { label: 'Home', href: '#home' },
-        { label: 'About', href: '#about' },
-        { label: 'Services', href: '#services' },
-        { label: 'Why Us', href: '#whyus' },
-        { label: 'Contact', href: '#contact' },
+        { label: 'HR', href: '#services' },
+        { label: 'Payroll', href: '#services' },
+        { label: 'Finance', href: '#services' },
+        { label: 'IT', href: '#services' },
+        { label: 'Compliance', href: '#whyus' },
     ];
 
     return (

@@ -5,21 +5,21 @@ import { img } from '../utils/imageUrl';
 const slides = [
     {
         bg: 'https://gramentheme.com/html/gratech/assets/images/banner/banner-image.jpg',
-        subtitle: 'Premium BPO â€” Fully Accountable',
-        title: <>Company-Owned.<br />Company-Managed.<br /><span className="text-accent">Fully Accountable.</span></>,
-        desc: 'We Don\'t Just Outsource. We Own It. One partner, one governance structure, zero subcontracting â€” for every back-office function your business needs.',
+        subtitle: 'Integrated Back-Office Solutions',
+        title: <>Integrated Back-Office Solutions for<br /><span className="text-accent">Scalable Business Growth</span></>,
+        desc: 'Enabling organizations to operate efficiently, compliantly, and with confidence.',
     },
     {
         bg: 'https://gramentheme.com/html/gratech/assets/images/banner/banner-image2.jpg',
         subtitle: 'Single Point of Accountability',
         title: <>Your Business,<br />Our Accountability.<br /><span className="text-accent">No Exceptions.</span></>,
-        desc: 'From HR and Payroll to IT and ISO Certification â€” one integrated management structure owns every outcome, every compliance requirement, every day.',
+        desc: 'From HR and Payroll to IT and ISO Certification — one integrated management structure owns every outcome, every compliance requirement, every day.',
     },
     {
         bg: 'https://gramentheme.com/html/gratech/assets/images/banner/banner-image3.jpg',
         subtitle: 'Built to Scale With You',
         title: <>Integrated Services.<br />Seamless Growth.<br /><span className="text-accent">Zero Compromise.</span></>,
-        desc: 'Our company-owned model scales dynamically from startup to multinational â€” maintaining the same standards of compliance, confidentiality, and continuity.',
+        desc: 'Our company-owned model scales dynamically from startup to multinational — maintaining the same standards of compliance, confidentiality, and continuity.',
     },
 ];
 
@@ -91,14 +91,14 @@ export default function Hero() {
                         <div className={`flex flex-wrap gap-4 transition-all duration-700 delay-300 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                             <a href="#contact"
                                 className="px-8 py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/40 flex items-center gap-2">
-                                Get Started
+                                Request a Consultation
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </a>
                             <a href="#services"
                                 className="px-8 py-4 border-2 border-white/40 hover:border-white hover:bg-white/10 text-white font-bold rounded-xl transition-all">
-                                Explore Services
+                                Explore Our Services
                             </a>
                         </div>
                     </div>
