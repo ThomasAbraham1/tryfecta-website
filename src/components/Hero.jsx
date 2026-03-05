@@ -79,9 +79,9 @@ export default function Hero() {
                         </p>
 
                         {/* Anti-outsourcing strip */}
-                        <div className={`flex flex-wrap gap-3 mb-10 transition-all duration-700 delay-300 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                            {['ðŸš« No Fragmented Vendors', 'ðŸš« No Subcontracting', 'ðŸš« No Compromise'].map(item => (
-                                <span key={item} className="bg-white/10 border border-white/20 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full font-medium">
+                        <div className={`flex flex-wrap gap-2 mb-10 transition-all duration-700 delay-300 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                            {['HR', 'Payroll', 'Finance', 'IT', 'Compliance'].map(item => (
+                                <span key={item} className="bg-white/10 border border-white/20 backdrop-blur-sm text-white text-sm px-3 py-1.5 rounded-full font-medium">
                                     {item}
                                 </span>
                             ))}
