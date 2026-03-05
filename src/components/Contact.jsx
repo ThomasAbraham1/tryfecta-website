@@ -100,7 +100,7 @@ export default function Contact() {
                                     className="w-full py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-primary/25 flex items-center justify-center gap-2">
                                     Send Message
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </button>
                             </form>

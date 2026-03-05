@@ -50,14 +50,12 @@ export default function Footer() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
                     {/* Brand column */}
                     <div className="lg:col-span-1">
-                        <a href="#home" className="flex items-center gap-3 mb-5">
-                            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                                <span className="text-white font-black text-lg">T</span>
-                            </div>
-                            <div>
-                                <span className="text-xl font-black">Tryfecta</span>
-                                <span className="block text-xs text-white/50 -mt-1 tracking-wider uppercase">Management</span>
-                            </div>
+                        <a href="#home" className="flex-shrink-0 overflow-hidden mb-5 block" style={{ height: '48px' }}>
+                            <img
+                                src="/images/logo/tryfecta.png"
+                                alt="Tryfecta Management"
+                                style={{ height: '140px', width: 'auto', marginTop: '-46px' }}
+                            />
                         </a>
                         <p className="text-white/55 text-sm leading-relaxed mb-6">
                             Company-Owned. Company-Managed. Fully Accountable.

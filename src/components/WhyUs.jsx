@@ -16,8 +16,8 @@ export default function WhyUs() {
             <div className="absolute inset-0">
                 {/* Faceless: night commercial city skyline, alive and dark */}
                 <img
-                    src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
-                    alt=""
+                    src="/images/bg/why-section.jpeg"
+                    alt="Corporate background"
                     className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/98 via-secondary/95 to-primary/80" />
@@ -52,7 +52,6 @@ export default function WhyUs() {
                     {reasons.map((r) => (
                         <div key={r.num}
                             className="group p-7 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/40 transition-all hover:-translate-y-1 relative overflow-hidden backdrop-blur-md">
-                            <div className="absolute right-0 bottom-0 text-white/15 text-9xl font-black pointer-events-none transition-all duration-500 group-hover:text-white/30 group-hover:-translate-y-2 leading-none p-2">{r.num}</div>
                             <div className="flex items-start gap-4 mb-4 relative z-10">
                                 <span className="text-2xl">{r.icon}</span>
                             </div>
