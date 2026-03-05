@@ -1,17 +1,10 @@
 ﻿import { img } from '../utils/imageUrl';
 
-// Inline SVG icons — no dependency on local PNG stubs
-const CheckIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5 text-primary">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-);
-
 const valueProps = [
     {
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
             </svg>
         ),
         title: 'Single Point of Accountability',
@@ -20,7 +13,7 @@ const valueProps = [
     {
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
         ),
         title: '24/7 Operational Continuity',
@@ -34,7 +27,7 @@ const stats = [
         label: 'Company-Owned',
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-white">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75" />
             </svg>
         ),
     },
@@ -70,26 +63,24 @@ const stats = [
 export default function About() {
     return (
         <section id="about" className="bg-slate-50 pt-24 pb-0 relative overflow-hidden">
-            {/* Decorative line shape */}
-            <div className="absolute left-0 top-0 opacity-20 pointer-events-none">
-                <img src={img('shape/about-line.png')} alt="" className="max-w-xs" />
-            </div>
-
             <div className="max-w-7xl mx-auto px-6 pb-24">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    {/* Left: image stack */}
+
+                    {/* Left: image stack — both images are faceless */}
                     <div className="relative">
                         <div className="rounded-2xl overflow-hidden shadow-2xl">
+                            {/* Faceless: modern empty open-plan office interior */}
                             <img
-                                src="https://gramentheme.com/html/gratech/assets/images/about/about-image1.jpg"
-                                alt="Tryfecta team at work"
+                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                                alt="Modern corporate office"
                                 className="w-full h-[480px] object-cover"
                             />
                         </div>
+                        {/* Floating overlay — faceless: laptop + documents on clean desk */}
                         <div className="absolute -bottom-8 -right-4 lg:-right-10 w-52 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                             <img
-                                src="https://gramentheme.com/html/gratech/assets/images/about/about-image2.png"
-                                alt="Team collaboration"
+                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+                                alt="Laptop and documents"
                                 className="w-full object-cover"
                             />
                         </div>
