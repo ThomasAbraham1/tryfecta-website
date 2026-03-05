@@ -10,13 +10,13 @@ const slides = [
         desc: 'Enabling organizations to operate efficiently, compliantly, and with confidence.',
     },
     {
-        bg: 'https://gramentheme.com/html/gratech/assets/images/banner/banner-image2.jpg',
+        bg: img('banner/hero-bg-2.jpg'),
         subtitle: 'Single Point of Accountability',
         title: <>Your Business,<br />Our Accountability.<br /><span className="text-accent">No Exceptions.</span></>,
         desc: 'From HR and Payroll to IT and ISO Certification — one integrated management structure owns every outcome, every compliance requirement, every day.',
     },
     {
-        bg: 'https://gramentheme.com/html/gratech/assets/images/banner/banner-image3.jpg',
+        bg: img('banner/hero-bg-3.jpg'),
         subtitle: 'Built to Scale With You',
         title: <>Integrated Services.<br />Seamless Growth.<br /><span className="text-accent">Zero Compromise.</span></>,
         desc: 'Our company-owned model scales dynamically from startup to multinational — maintaining the same standards of compliance, confidentiality, and continuity.',

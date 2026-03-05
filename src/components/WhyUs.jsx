@@ -11,17 +11,9 @@ const reasons = [
 
 export default function WhyUs() {
     return (
-        <section id="whyus" className="relative py-24 overflow-hidden">
-            {/* Full background image with overlay */}
-            <div className="absolute inset-0">
-                {/* Faceless: night commercial city skyline, alive and dark */}
-                <img
-                    src={img('bg/why-section.jpeg')}
-                    alt="Corporate background"
-                    className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/98 via-secondary/95 to-primary/80" />
-            </div>
+        <section id="whyus" className="relative py-24 overflow-hidden bg-slate-900">
+            {/* Full background with dark overlay */}
+            <div className="absolute inset-0 bg-secondary/95" />
 
             {/* Decorative shapes from template */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
@@ -59,17 +51,6 @@ export default function WhyUs() {
                             <p className="text-white/50 text-sm leading-relaxed">{r.desc}</p>
                         </div>
                     ))}
-                </div>
-
-                {/* Bottom CTA strip */}
-                <div className="mt-14 text-center">
-                    <a href="#contact"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all hover:scale-105 shadow-lg shadow-primary/40">
-                        Request Consultation
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
                 </div>
             </div>
         </section>
