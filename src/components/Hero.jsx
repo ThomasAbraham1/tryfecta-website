@@ -6,7 +6,7 @@ const slides = [
     {
         bg: 'https://gramentheme.com/html/gratech/assets/images/banner/banner-image.jpg',
         subtitle: 'Integrated Back-Office Solutions',
-        title: <>Integrated Back-Office Solutions for<br /><span className="text-accent">Scalable Business Growth</span></>,
+        title: <>Integrated Back-Office Solutions for <span className="text-accent">Scalable Business Growth</span></>,
         desc: 'Enabling organizations to operate efficiently, compliantly, and with confidence.',
     },
     {
@@ -29,20 +29,20 @@ export default function Hero() {
 
     useEffect(() => {
         setLoaded(true);
-        const timer = setInterval(() => setCurrent(c => (c + 1) % slides.length), 5500);
+        const timer = setInterval(() => setCurrent(c => (c + 1) % slides.length), 8000);
         return () => clearInterval(timer);
     }, []);
 
     const slide = slides[current];
 
     return (
-        <section id="home" className="relative min-h-[85vh] lg:min-h-screen overflow-hidden">
+        <section id="home" className="relative min-h-[70vh] lg:min-h-[75vh] overflow-hidden">
             {/* Background image with overlay */}
             {slides.map((s, i) => (
                 <div key={i}
                     className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? 'opacity-100' : 'opacity-0'}`}>
                     <img src={s.bg} alt="" className="w-full h-full object-cover object-center" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-secondary/85 via-secondary/70 to-secondary/20" />
                 </div>
             ))}
 
@@ -51,30 +51,30 @@ export default function Hero() {
                 <img src={img("banner/banner-solid-left-shape.png")} alt="" className="h-[70vh] object-contain" />
             </div>
             {/* Decorative right shape */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none hidden xl:block">
-                <img src={img("banner/banner-shape-right.png")} alt="" className="h-[60vh] object-contain" />
+            <div className="absolute right-0 bottom-0 opacity-20 pointer-events-none hidden xl:block">
+                <img src={img("banner/banner-shape-right.png")} alt="" className="h-[60vh] object-contain object-bottom" />
             </div>
 
             {/* Main Content */}
-            <div className="relative z-10 flex items-center min-h-[85vh] lg:min-h-screen">
-                <div className="max-w-7xl mx-auto px-6 pt-24 pb-24 lg:py-32 w-full">
+            <div className="relative z-10 flex items-center min-h-[70vh] lg:min-h-[75vh]">
+                <div className="max-w-7xl mx-auto px-6 pt-20 pb-16 lg:py-20 w-full">
                     <div className="max-w-3xl">
                         {/* Subtitle badge */}
-                        <div className={`flex items-center gap-3 mb-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-                            <svg width="40" height="16" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div className={`flex items-center gap-2 mb-4 transition-all duration-700 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+                            <svg width="24" height="10" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="25.67" height="15" rx="7.5" stroke="white" />
                                 <rect x="13.33" y="0" width="26.67" height="16" rx="8" fill="white" />
                             </svg>
-                            <h4 className="text-white/80 font-semibold text-sm uppercase tracking-widest">{slide.subtitle}</h4>
+                            <h4 className="text-white/80 font-semibold text-[11px] md:text-xs uppercase tracking-widest">{slide.subtitle}</h4>
                         </div>
 
                         {/* Main heading */}
-                        <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight mb-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+                        <h1 className={`text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-4 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
                             {slide.title}
                         </h1>
 
                         {/* Description */}
-                        <p className={`text-white/70 text-lg leading-relaxed max-w-xl mb-8 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+                        <p className={`text-white/70 text-sm md:text-base leading-relaxed max-w-xl mb-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
                             {slide.desc}
                         </p>
 

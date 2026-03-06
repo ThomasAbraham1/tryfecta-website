@@ -6,7 +6,14 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setSubmitted(true);
+        const formData = new FormData(e.target);
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        })
+            .then(() => setSubmitted(true))
+            .catch((error) => console.error("Form submission error:", error));
     };
 
     const services = [
@@ -60,31 +67,33 @@ export default function Contact() {
                                 <p className="text-gray-500">Our team will get back to you within 24 hours.</p>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="space-y-5">
+                            <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-5">
+                                <input type="hidden" name="form-name" value="contact" />
+                                <div hidden><input name="bot-field" /></div>
                                 <h3 className="text-xl font-bold text-secondary mb-2">Send Us a Message</h3>
                                 <div className="grid sm:grid-cols-2 gap-5">
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-700 mb-1.5">Full Name *</label>
-                                        <input required type="text" placeholder="John Smith"
+                                        <input required type="text" name="name" placeholder="John Smith"
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm bg-white"
                                             value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-700 mb-1.5">Email Address *</label>
-                                        <input required type="email" placeholder="john@company.com"
+                                        <input required type="email" name="email" placeholder="john@company.com"
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm bg-white"
                                             value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
                                     </div>
                                 </div>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-1.5">Company Name</label>
-                                    <input type="text" placeholder="Your Company Ltd."
+                                    <input type="text" name="company" placeholder="Your Company Ltd."
                                         className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm bg-white"
                                         value={form.company} onChange={e => setForm({ ...form, company: e.target.value })} />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-1.5">Service of Interest</label>
-                                    <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm bg-white text-gray-600"
+                                    <select name="service" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm bg-white text-gray-600"
                                         value={form.service} onChange={e => setForm({ ...form, service: e.target.value })}>
                                         <option value="">Select a service...</option>
                                         {services.map(s => <option key={s} value={s}>{s}</option>)}
@@ -92,16 +101,13 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-1.5">Message *</label>
-                                    <textarea required rows={4} placeholder="Tell us about your business needs..."
+                                    <textarea required rows={4} name="message" placeholder="Tell us about your business needs..."
                                         className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm bg-white resize-none"
                                         value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} />
                                 </div>
                                 <button type="submit"
-                                    className="w-full py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-primary/25 flex items-center justify-center gap-2">
+                                    className="w-full py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-primary/25 text-center">
                                     Send Message
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg>
                                 </button>
                             </form>
                         )}
