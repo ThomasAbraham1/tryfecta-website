@@ -1,12 +1,15 @@
 import { useState } from 'react';
 
 export default function Contact() {
-    const [form, setForm] = useState({ name: '', email: '', company: '', service: '', message: '' });
+    const [form, setForm] = useState({ name: '', email: '', company: '', services: [], message: '' });
     const [submitted, setSubmitted] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
+        // Replace individual checkbox entries with a single joined string
+        formData.delete('services');
+        formData.append('services', form.services.join(', ') || 'None selected');
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -14,6 +17,15 @@ export default function Contact() {
         })
             .then(() => setSubmitted(true))
             .catch((error) => console.error("Form submission error:", error));
+    };
+
+    const toggleService = (s) => {
+        setForm(prev => ({
+            ...prev,
+            services: prev.services.includes(s)
+                ? prev.services.filter(x => x !== s)
+                : [...prev.services, s]
+        }));
     };
 
     const services = [
@@ -31,18 +43,17 @@ export default function Contact() {
                             Contact Us
                         </span>
                         <h2 className="text-4xl lg:text-5xl font-black text-secondary mb-6 leading-tight">
-                            Start the Conversation
+                            Let's Discuss Your Requirement
                         </h2>
                         <p className="text-gray-500 text-lg leading-relaxed mb-10">
-                            Tell us about your business structure, pain points, and goals. Our team will identify exactly which integrated services can strengthen your corporate foundation.
+                            Tell us your business goals and pain points — we'll identify exactly which integrated services fit your needs.
                         </p>
 
                         {/* Contact cards */}
                         <div className="space-y-4">
                             {[
                                 { icon: '📧', label: 'Email', val: 'info@tryfecta.com', href: 'mailto:info@tryfecta.com' },
-                                { icon: '📞', label: 'Phone', val: '+1 (800) 000-0000', href: 'tel:+18000000000' },
-                                { icon: '📍', label: 'Office', val: 'Available Globally', href: '#' },
+                                { icon: '📞', label: 'Phone', val: '+91 99585 37774', href: 'tel:+919958537774' },
                             ].map(c => (
                                 <a key={c.label} href={c.href}
                                     className="flex items-center gap-4 p-5 rounded-xl border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all group">
@@ -70,7 +81,6 @@ export default function Contact() {
                             <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-5">
                                 <input type="hidden" name="form-name" value="contact" />
                                 <div hidden><input name="bot-field" /></div>
-                                <h3 className="text-xl font-bold text-secondary mb-2">Send Us a Message</h3>
                                 <div className="grid sm:grid-cols-2 gap-5">
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-700 mb-1.5">Full Name *</label>
@@ -92,12 +102,30 @@ export default function Contact() {
                                         value={form.company} onChange={e => setForm({ ...form, company: e.target.value })} />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Service of Interest</label>
-                                    <select name="service" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm bg-white text-gray-600"
-                                        value={form.service} onChange={e => setForm({ ...form, service: e.target.value })}>
-                                        <option value="">Select a service...</option>
-                                        {services.map(s => <option key={s} value={s}>{s}</option>)}
-                                    </select>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">Services of Interest</label>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                                        {services.map(s => {
+                                            const checked = form.services.includes(s);
+                                            return (
+                                                <label key={s}
+                                                    className={`flex items-center gap-2 p-2.5 rounded-lg border cursor-pointer transition-all select-none text-sm ${checked
+                                                        ? 'border-primary bg-primary/5 text-primary font-semibold'
+                                                        : 'border-gray-200 text-gray-600 hover:border-primary/40 hover:bg-gray-50'
+                                                        }`}>
+                                                    <span className={`w-4 h-4 rounded flex items-center justify-center flex-shrink-0 border transition-all ${checked ? 'bg-primary border-primary' : 'border-gray-300 bg-white'
+                                                        }`}>
+                                                        {checked && (
+                                                            <svg className="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 10 10">
+                                                                <path d="M1.5 5l2.5 2.5L8.5 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                                                            </svg>
+                                                        )}
+                                                    </span>
+                                                    {s}
+                                                    <input type="checkbox" name="services" value={s} checked={checked} onChange={() => toggleService(s)} className="sr-only" />
+                                                </label>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
                                 <div>
                                     <label className="block text-sm font-semibold text-gray-700 mb-1.5">Message *</label>

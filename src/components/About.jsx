@@ -41,7 +41,7 @@ const stats = [
         ),
     },
     {
-        value: '7+',
+        value: '8+',
         label: 'Service Pillars',
         icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-white">

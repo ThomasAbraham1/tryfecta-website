@@ -36,7 +36,7 @@ export default function WhyUs() {
                     </div>
                     <h2 className="text-4xl lg:text-5xl font-black text-white mb-5">The Integrated Advantage</h2>
                     <p className="text-white/55 max-w-xl mx-auto text-lg">
-                        Six reasons why forward-thinking businesses choose Tryfecta's company-owned model over fragmented outsourcing.
+                        Why forward-thinking businesses choose Tryfecta's company-owned model over fragmented outsourcing.
                     </p>
                 </div>
 
