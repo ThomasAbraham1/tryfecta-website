@@ -10,7 +10,7 @@ export default function Contact() {
         // Replace individual checkbox entries with a single joined string
         formData.delete('services');
         formData.append('services', form.services.join(', ') || 'None selected');
-        fetch("/", {
+        fetch("/contact.php", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString()
@@ -78,9 +78,7 @@ export default function Contact() {
                                 <p className="text-gray-500">Our team will get back to you within 24 hours.</p>
                             </div>
                         ) : (
-                            <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-5">
-                                <input type="hidden" name="form-name" value="contact" />
-                                <div hidden><input name="bot-field" /></div>
+                            <form onSubmit={handleSubmit} className="space-y-5">
                                 <div className="grid sm:grid-cols-2 gap-5">
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-700 mb-1.5">Full Name *</label>
