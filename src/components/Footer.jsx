@@ -2,8 +2,8 @@ import { img } from '../utils/imageUrl';
 
 const services = [
     'Human Resources', 'Payroll Services', 'Accounting & Finance',
-    'IT & Digital Support', 'Commercial Services', 'ISO Certification',
-    'Corporate Secretarial', 'Business Advisory',
+    'IT Systems Support', 'Cybersecurity', 'Commercial Services', 'ISO Certification',
+    'Corporate Secretarial',
 ];
 
 
@@ -12,24 +12,23 @@ export default function Footer() {
     return (
         <footer className="bg-secondary text-white">
             <div className="max-w-7xl mx-auto px-6 py-16">
-                <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-14">
+                <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 mb-14">
                     {/* Brand column */}
-                    <div className="lg:col-span-1">
-                        <a href="#home" className="flex-shrink-0 mb-6 block">
+                    <div className="lg:col-span-3">
+                        <a href="#home" className="flex-shrink-0 block mb-6 -ml-2">
                             <img
                                 src={img('logo/tryfecta.png')}
                                 alt="Tryfecta Management"
-                                className="max-w-[180px] lg:max-w-[220px] h-auto"
+                                className="max-w-[220px] lg:max-w-[280px] h-auto"
                             />
                         </a>
-                        <p className="text-white/55 text-sm leading-relaxed mb-6">
-                            Company-Owned. Company-Managed. Fully Accountable.
+                        <p className="text-white/55 text-sm leading-relaxed mb-6 max-w-[220px] lg:max-w-[280px]">
                             Your single partner for integrated back-office excellence.
                         </p>
                     </div>
 
                     {/* Services */}
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-5">
                         <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-widest">Our Services</h4>
                         <ul className="grid sm:grid-cols-2 gap-y-2.5 gap-x-6">
                             {services.map(s => (
@@ -46,10 +45,10 @@ export default function Footer() {
                     </div>
 
                     {/* Quick links */}
-                    <div>
+                    <div className="lg:col-span-2">
                         <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-widest">Quick Links</h4>
                         <ul className="space-y-2.5">
-                            {['Services', 'About', 'Why Us',  'Contact'].map(l => (
+                            {['Services', 'About', 'Why Us', 'Contact'].map(l => (
                                 <li key={l}>
                                     <a href={`#${l.toLowerCase().replace(/\s+/g, '')}`}
                                         className="text-white/55 hover:text-accent transition-colors text-sm flex items-center gap-2">
@@ -63,8 +62,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact info */}
-                    <div>
+                    <div className="lg:col-span-2">
                         <h4 className="font-bold text-white mb-5 text-sm uppercase tracking-widest">Get In Touch</h4>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-white/55 text-sm">

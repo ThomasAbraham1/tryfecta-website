@@ -30,7 +30,7 @@ export default function Contact() {
 
     const services = [
         'Human Resources', 'Payroll Services', 'Accounting & Finance',
-        'IT & Digital Support', 'Commercial Services', 'ISO Certification Support', 'Corporate Secretarial',
+        'IT Systems Support', 'Cybersecurity', 'Commercial Services', 'ISO Certification Support', 'Corporate Secretarial',
     ];
 
     return (
